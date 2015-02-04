@@ -1,15 +1,15 @@
-if (Assets.find().count() === 0) {
-  Assets.insert({
+if (Cessions.find().count() === 0) {
+  Cessions.insert({
     title: 'Cession 1',
     url: 'http://google.com/'
   });
 
-  Assets.insert({
+  Cessions.insert({
     title: 'Cession 2',
     url: 'http://google.com/'
   });
 
-  Assets.insert({
+  Cessions.insert({
     title: 'Cession 3',
     url: 'http://google.com/'
   });

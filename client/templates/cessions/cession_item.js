@@ -1,4 +1,4 @@
-Template.assetItem.helpers({
+Template.cessionItem.helpers({
   domain: function() {
     var a = document.createElement('a');
     a.href = this.url;

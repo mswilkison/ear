@@ -1,4 +1,4 @@
-var assetsData = [
+var cessionsData = [
   {
     title: 'Cession name 1',
     url: 'http://google.com/'
@@ -13,6 +13,6 @@ var assetsData = [
   }
 ];
 
-Template.assetsList.helpers({
-  assets: assetsData
+Template.cessionsList.helpers({
+  cessions: cessionsData
 });

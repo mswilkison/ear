@@ -1,4 +1,4 @@
-.grid-block, .main, .asset, .comments li, .comment-form {
+.grid-block, .main, .cession, .comments li, .comment-form {
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -28,51 +28,51 @@ body {
 #spinner {
   height: 300px; }
 
-.asset {
+.cession {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
-  .asset:before, .asset:after {
+  .cession:before, .cession:after {
     content: "";
     display: table; }
-  .asset:after {
+  .cession:after {
     clear: both; }
-  .asset.invisible {
+  .cession.invisible {
     opacity: 0; }
-  .asset.instant {
+  .cession.instant {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none; }
-  .asset.animate{
+  .cession.animate{
     -webkit-transition: all 300ms 0ms;
     -webkit-transition-delay: ease-in;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
-  .asset .upvote {
+  .cession .upvote {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }
-  .asset .asset-content {
+  .cession .cession-content {
     float: left; }
-    .asset .asset-content h3 {
+    .cession .cession-content h3 {
       margin: 0;
       line-height: 1.4;
       font-size: 18px; }
-      .asset .asset-content h3 a {
+      .cession .cession-content h3 a {
         display: inline-block;
         margin-right: 5px; }
-      .asset .asset-content h3 span {
+      .cession .cession-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: #aaaaaa; }
-    .asset .asset-content p {
+    .cession .cession-content p {
       margin: 0; }
-  .asset .discuss {
+  .cession .discuss {
     display: block;
     float: right;
     margin-top: 7px; }
@@ -115,7 +115,7 @@ body {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1); }
 
-.assets .spinner-container{
+.cessions .spinner-container{
   position: relative;
   height: 100px;
 }
