@@ -12,7 +12,11 @@ Template.cessionSubmit.events({
       assetDescription: $(e.target).find('[name=assetDescription]').val()
     };
 
-    cession._id = Cessions.insert(cession);
-    Router.go('cessionPage', cession);
+    Meteor.call('cessionInsert', cession, function(error, result) {
+      if (error) {
+        return alert(error.reason);
+      }
+      Router.go('cessionPage', {_id: result._id});
+    });
   }
 });
