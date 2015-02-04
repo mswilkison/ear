@@ -1,18 +1,5 @@
-var cessionsData = [
-  {
-    title: 'Cession name 1',
-    url: 'http://google.com/'
-  },
-  {
-    title: 'Cession name 2',
-    url: 'http://google.com/'
-  },
-  {
-    title: 'Cession name 3',
-    url: 'http://google.com/'
-  }
-];
-
 Template.cessionsList.helpers({
-  cessions: cessionsData
+  cessions: function() {
+    return Cessions.find();
+  }
 });
