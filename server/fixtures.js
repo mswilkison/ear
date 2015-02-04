@@ -1,16 +1,31 @@
 if (Cessions.find().count() === 0) {
   Cessions.insert({
-    title: 'Cession 1',
-    url: 'http://google.com/'
+    regNumber: '1958099908',
+    assetClass: 'Debtors',
+    cessionType: 'Pledge',
+    cessionDate: '2015-02-13',
+    amountAgainst: '1000',
+    inputFile: undefined,
+    assetDescription: 'This here awesome asset'
   });
 
   Cessions.insert({
-    title: 'Cession 2',
-    url: 'http://google.com/'
+    regNumber: '1958099908',
+    assetClass: 'Debtors',
+    cessionType: 'Pledge',
+    cessionDate: '2015-02-13',
+    amountAgainst: '1000',
+    inputFile: undefined,
+    assetDescription: 'This here awesome asset'
   });
 
   Cessions.insert({
-    title: 'Cession 3',
-    url: 'http://google.com/'
+    regNumber: '1958099908',
+    assetClass: 'Debtors',
+    cessionType: 'Pledge',
+    cessionDate: '2015-02-13',
+    amountAgainst: '1000',
+    inputFile: undefined,
+    assetDescription: 'This here awesome asset'
   });
 }

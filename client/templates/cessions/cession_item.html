@@ -1,7 +1,7 @@
 <template name="cessionItem">
   <div class="cession">
     <div class="cession-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{pathFor 'cessionPage'}}">{{_id}}</a><span>{{regNumber}}</span></h3>
     </div>
     <a href="{{pathFor 'cessionPage'}}" class="examine btn btn-default">Examine</a>
   </div>
