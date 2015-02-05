@@ -11,7 +11,7 @@ Template.cessionUpdate.events({
 
     Cessions.update(currentCessionId, {$set: cessionProperties}, function(error) {
       if (error) {
-        alert(error.reason);
+        throwError(error.reason);
       } else {
         Router.go('cessionPage', {_id: currentCessionId});
       }

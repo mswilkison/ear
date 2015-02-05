@@ -14,7 +14,7 @@ Template.cessionSubmit.events({
 
     Meteor.call('cessionInsert', cession, function(error, result) {
       if (error) {
-        return alert(error.reason);
+        return throwError(error.reason);
       }
       Router.go('cessionPage', {_id: result._id});
     });
