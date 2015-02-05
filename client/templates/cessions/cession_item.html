@@ -2,6 +2,10 @@
   <div class="cession">
     <div class="cession-content">
       <h3><a href="{{pathFor 'cessionPage'}}">{{_id}}</a><span>{{regNumber}}</span></h3>
+      <p>
+        created by {{author}}
+        {{#if ownCession}}<a href="{{pathFor 'cessionUpdate'}}">Update</a>{{/if}}
+      </p>
     </div>
     <a href="{{pathFor 'cessionPage'}}" class="examine btn btn-default">Examine</a>
   </div>

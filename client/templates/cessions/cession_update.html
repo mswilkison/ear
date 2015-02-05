@@ -1,0 +1,40 @@
+<template name="cessionUpdate">
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="status">Cession Status</label>
+      <div class="controls">
+        <div class="radio">
+          <label>
+            <input type="radio" name="statusRadios" id="statusRadios1" value="Active" checked>
+            Active
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="statusRadios" id="statusRadios1" value="Late">
+            Late
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="statusRadios" id="statusRadios1" value="Default">
+            Default
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="statusRadios" id="statusRadios1" value="Closed">
+            Closed
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="updateDescription">Update Description</label>
+      <div class="controls">
+        <textarea name="updateDescription" id="updateDescription" placeholder="Enter description..." class="form-control" rows="3"></textarea>
+      </div>
+    </div>
+    <input type="submit" value="Update" class="btn btn-primary" />
+  </form>
+</template>
