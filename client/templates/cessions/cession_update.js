@@ -5,7 +5,7 @@ Template.cessionUpdate.events({
     var currentCessionId = this._id;
 
     var cessionProperties = {
-      status: $(e.target).find('[name=statusRadios]').val(),
+      cessionStatus: $(e.target).find('[name=statusRadios]').val(),
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
