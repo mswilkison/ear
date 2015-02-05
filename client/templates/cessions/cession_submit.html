@@ -1,12 +1,13 @@
 <template name="cessionSubmit">
   <form class="main form">
-    <div class="form-group">
+    <div class="form-group {{errorClass 'regNumber'}}">
       <label class="control-label" for="regNumber">Registration Number</label>
       <div class="controls">
         <input name="regNumber" id="regNumber" type="text" value="" placeholder="Enter Registration Number" class="form-control" />
+        <span class="help-block">{{errorMessage 'regNumber'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'assetClass'}}">
       <label class="control-label" for="assetClass">Asset Class</label>
       <select name="assetClass" id="assetClass" class="form-control">
         <option>Debtors</option>
@@ -14,8 +15,9 @@
         <option>Debtors</option>
         <option>Debtors</option>
       </select>
+      <span class="help-block">{{errorMessage 'assetClass'}}</span>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'cessionType'}}">
       <label class="control-label" for="cessionType">Cession Type</label>
       <select name="cessionType" id="cessionType" class="form-control">
         <option>Pledge</option>
@@ -23,30 +25,35 @@
         <option>Pledge</option>
         <option>Pledge</option>
       </select>
+      <span class="help-block">{{errorMessage 'cessionType'}}</span>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'cessionDate'}}">
       <label class="control-label" for="cessionDate">Date of Cession</label>
       <div class="controls">
         <input name="cessionDate" id="cessionDate" type="date" class="form-control" />
+        <span class="help-block">{{errorMessage 'cessionDate'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'amountAgainst'}}">
       <label class="control-label" for="amountAgainst">Amount against Cession</label>
       <div class="input-group">
         <span class="input-group-addon">$</span>
         <input name="amountAgainst" id="amountAgainst" type="number" value="" placeholder="Enter Amount" min="0" class="form-control" />
       </div>
+        <span class="help-block">{{errorMessage 'amountAgainst'}}</span>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'inputFile'}}">
       <label class="control-label" for="inputFile">Document Upload</label>
       <div class="controls">
         <input name="inputFile" id="inputFile" type="file" class="form-control" />
+        <span class="help-block">{{errorMessage 'inputFile'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'assetDescription'}}">
       <label class="control-label" for="assetDescription">Asset Description</label>
       <div class="controls">
         <textarea name="assetDescription" id="assetDescription" placeholder="Enter description..." class="form-control" rows="3"></textarea>
+        <span class="help-block">{{errorMessage 'assetDescription'}}</span>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary" />

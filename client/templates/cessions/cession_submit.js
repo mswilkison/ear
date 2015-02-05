@@ -12,11 +12,30 @@ Template.cessionSubmit.events({
       assetDescription: $(e.target).find('[name=assetDescription]').val()
     };
 
+    var errors = validateCession(cession);
+    if (errors.regNumber || errors.assetClass || errors.cessionType ||
+        errors.cessionDate || errors.amountAgainst) {
+      return Session.set('cessionSubmitErrors', errors);
+    }
+
     Meteor.call('cessionInsert', cession, function(error, result) {
       if (error) {
         return throwError(error.reason);
       }
       Router.go('cessionPage', {_id: result._id});
     });
+  }
+});
+
+Template.cessionSubmit.created = function() {
+  Session.set('cessionSubmitErrors', {});
+};
+
+Template.cessionSubmit.helpers({
+  errorMessage: function(field) {
+    return Session.get('cessionSubmitErrors')[field];
+  },
+  errorClass: function(field) {
+    return !!Session.get('cessionSubmitErrors')[field] ? 'has-error' : '';
   }
 });
