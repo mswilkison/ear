@@ -1,4 +1,15 @@
 <template name="profile">
-  <h3>Arnold Schwarzenegger</h3>
-  <p>Goldman Sachs</p>
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="profilePicture">Profile Picture</label>
+      <div class="controls">
+        <input name="profilePicture" id="profilePicture" type="file" class="form-control" />
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+  </form>
+</template>
+
+<template name="myPicture">
+  <img src={{url}} />
 </template>

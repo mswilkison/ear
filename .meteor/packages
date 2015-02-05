@@ -12,6 +12,4 @@ sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
 audit-argument-checks
-yogiben:autoform-file
-cfs:standard-packages
-cfs:gridfs
+edgee:slingshot
