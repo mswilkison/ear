@@ -7,7 +7,7 @@ Template.profile.events({
     var profilePicture = $(e.target).find('[name=profilePicture]')[0].files[0];
 
     uploader.send(profilePicture, function(error, downloadUrl) {
-      Meteor.users.update(Meteor.userId(), {$push: {"profile.picture": downloadUrl}});
+      Meteor.users.update(Meteor.userId(), {$set: {"profile.picture": downloadUrl}});
     });
   }
 });

@@ -1,4 +1,5 @@
 <template name="profile">
+  <img src="{{profileThumbSrc currentUser._id}}" />
   <form class="main form">
     <div class="form-group">
       <label class="control-label" for="profilePicture">Profile Picture</label>
@@ -8,8 +9,4 @@
     </div>
     <input type="submit" value="Submit" class="btn btn-primary" />
   </form>
-</template>
-
-<template name="myPicture">
-  <img src={{url}} />
 </template>
