@@ -17,7 +17,7 @@ Template.cessionUpdate.events({
     var currentCessionId = this._id;
 
     var cessionProperties = {
-      cessionStatus: $(e.target).find('[name=statusRadios]').val(),
+      cessionStatus: $(e.target).find('[name=statusRadios]:checked').val(),
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
