@@ -1,0 +1,30 @@
+<template name="profileEdit">
+  <img src="{{profileThumbSrc currentUser._id}}" />
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="profilePicture">Profile Picture</label>
+      <div class="controls">
+        <input name="profilePicture" id="profilePicture" type="file" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="firstName">First name</label>
+      <div class="controls">
+        <input name="firstName" id="firstName" type="text" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="surname">Surname</label>
+      <div class="controls">
+        <input name="surname" id="surname" type="text" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="organization">Company/Organization</label>
+      <div class="controls">
+        <input name="organization" id="organization" type="text" class="form-control" />
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+  </form>
+</template>
