@@ -5,8 +5,7 @@ Template.profileEdit.events({
     e.preventDefault();
 
     var profilePicture = $(e.target).find('[name=profilePicture]')[0].files[0];
-    var firstName = $(e.target).find('[name=firstName]').val();
-    var surname = $(e.target).find('[name=surname]').val();
+    var fullName = $(e.target).find('[name=fullName]').val();
     var organization = $(e.target).find('[name=organization]').val();
 
     if (profilePicture) {
@@ -15,8 +14,8 @@ Template.profileEdit.events({
       });
     }
 
-    Meteor.users.update(Meteor.userId(), {$set: {"profile.firstName": firstName,
-                                                 "profile.surname": surname,
+    Meteor.users.update(Meteor.userId(), {$set: {"profile.fullName": fullName,
                                                  "profile.organization": organization}});
+    Router.go('dashboard');
   }
 });

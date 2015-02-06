@@ -8,21 +8,15 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label" for="firstName">First name</label>
+      <label class="control-label" for="fullName">Full Name</label>
       <div class="controls">
-        <input name="firstName" id="firstName" type="text" class="form-control" />
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label" for="surname">Surname</label>
-      <div class="controls">
-        <input name="surname" id="surname" type="text" class="form-control" />
+        <input name="fullName" id="fullName" type="text" class="form-control" value="{{currentUser.profile.fullName}}"/>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label" for="organization">Company/Organization</label>
       <div class="controls">
-        <input name="organization" id="organization" type="text" class="form-control" />
+        <input name="organization" id="organization" type="text" class="form-control" value="{{currentUser.profile.organization}}"/>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary" />
