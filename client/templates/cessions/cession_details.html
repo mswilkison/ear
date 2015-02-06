@@ -1,0 +1,31 @@
+<template name="cessionDetails">
+  <div class="cession">
+    <div class="cession-content">
+      <h3>{{_id}}<span>{{regNumber}}</span></h3>
+      <p>
+        created by {{author}}
+        {{#if ownCession}}<a href="{{pathFor 'cessionUpdate'}}">Update</a>{{/if}}
+      </p>
+    <p>
+      <strong>Asset Class</strong> {{assetClass}}
+    </p>
+    <p>
+      <strong>Cession Type</strong> {{cessionType}}
+    </p>
+    <p>
+      <strong>Date of Cession</strong> {{cessionDate}}
+    </p>
+    <p>
+      <strong>Amount against Cession</strong> {{amountAgainst}}
+    </p>
+    <p>
+      <strong>Supporting Documents</strong> {{inputFile}}
+    </p>
+    <p>
+      <strong>Asset Description</strong> {{assetDescription}}
+    </p>
+    </div>
+    <p class="label {{cessionStatusColor}} label-as-badge">
+    {{cessionStatus}}</p>
+  </div>
+</template>
