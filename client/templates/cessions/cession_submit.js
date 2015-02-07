@@ -13,8 +13,7 @@ Template.cessionSubmit.events({
       cessionDate: $(e.target).find('[name=cessionDate]').val(),
       amountAgainst: $(e.target).find('[name=amountAgainst]').val(),
       inputFile: $(e.target).find('[name=inputFile]').val(),
-      assetDescription: $(e.target).find('[name=assetDescription]').val(),
-      cessionStatus: "Active"
+      assetDescription: $(e.target).find('[name=assetDescription]').val()
     };
 
     var errors = validateCession(cession);
