@@ -1,3 +1,7 @@
+Template.cessionSubmit.rendered = function() {
+  $('#cessionDate').datepicker();
+};
+
 Template.cessionSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
