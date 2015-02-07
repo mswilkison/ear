@@ -162,3 +162,8 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+.form-control[readonly] {
+  cursor: auto;
+  background-color: #fff;
+}

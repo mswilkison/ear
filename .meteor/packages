@@ -18,4 +18,4 @@ meteorhacks:npm
 
 npm-container
 maclane:bootstrap-material-design
-rajit:bootstrap3-datepicker
+cwohlman:pickadate

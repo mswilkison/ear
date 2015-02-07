@@ -1,5 +1,7 @@
 Template.cessionSubmit.rendered = function() {
-  $('#cessionDate').datepicker();
+  $('#cessionDate').pickadate({
+    format: 'mm/dd/yyyy'
+  });
 };
 
 Template.cessionSubmit.events({
