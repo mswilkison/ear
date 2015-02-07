@@ -7,6 +7,11 @@ Template.cessionUpdate.helpers({
   },
   errorClass: function(field) {
     return !!Session.get('cessionUpdateErrors')[field] ? 'has-error' : '';
+  },
+  isSelected: function(value) {
+    if (value === this.cessionStatus) {
+      return "selected";
+    }
   }
 });
 
@@ -17,7 +22,7 @@ Template.cessionUpdate.events({
     var currentCessionId = this._id;
 
     var cessionProperties = {
-      cessionStatus: $(e.target).find('[name=statusRadios]:checked').val(),
+      cessionStatus: $(e.target).find('[name=cessionStatus]').val(),
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
