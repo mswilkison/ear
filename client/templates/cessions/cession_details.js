@@ -13,5 +13,9 @@ Template.cessionDetails.helpers({
     } else {
       return "label-default";
     }
+  },
+
+  elideTxid: function(txid) {
+    return txid.substr(0, 6) + '...';
   }
 });

@@ -7,7 +7,7 @@
         {{#if ownCession}}<a href="{{pathFor 'cessionUpdate'}}">Update</a>{{/if}}
       </p>
     <p>
-    <strong>Transaction ID</strong> <a target="_blank" href="https://test-insight.bitpay.com/tx/{{txid}}">{{txid}}</a>
+    <strong>Transaction ID</strong> <a style="width: 3px; text-overflow:ellipsis" target="_blank" href="https://test-insight.bitpay.com/tx/{{txid}}">{{elideTxid txid}}</a>
     </p>
     <p>
       <strong>Asset Class</strong> {{assetClass}}
