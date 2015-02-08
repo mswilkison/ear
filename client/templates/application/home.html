@@ -1,11 +1,33 @@
 <template name="home">
   <div class="jumbotron">
-    <p>EAR is a platform for tracking ownership and creditor interests in physical assets.
-    At its lowest level it functions as a timestamping and notary service that uses the
-    blockhain (an immutable public ledger) to record cessions (the transfer of interests or
-    rights in an asset).</p>
+    <h2>Electronic Asset Registry</h2>
+    <p>This is a platform for tracking ownership and creditor interests in physical assets.
+    At its lowest level it functions as a timestamping service that uses the blockhain
+    (an immutable public ledger) to record cessions (the transfer of interests or rights in an asset).</p>
 
     <p>By writing the unique hash of a cession and its supporting documents into
     the blockchain, EAR can be used to validate claims on an asset.</p>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="mdi-action-schedule"></i>&nbsp;Timestamping</h3>
+          </div>
+          <div class="panel-body">
+            You can prove the existence of data at a given point in time. EAR writes the hash of your data into the blockchain, providing irrefutable "proof of existence." Your data is verified by the blockchain, rather than a central authority or intermediary.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="mdi-action-description"></i>&nbsp;Asset Registry</h3>
+          </div>
+          <div class="panel-body">
+            By timestamping purchases, transfers, leins, and other cessions of an assets, we can create use the blockchain as an electronic asset registry, which can be used to certify ownership claims by both debtors and creditors.</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
