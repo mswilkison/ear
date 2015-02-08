@@ -6,7 +6,7 @@ btc_config = {
     private_key: "ef9e018449bd4997932dd6e0ceb899cad5611132d67d1fd28c8f2a8d1f95db5c2c01"  // Test! It should be private or someone will steal our  precious testnet coins XXX
 }
 
-var bitcore = Npm.require('bitcore');
+var bitcore = Meteor.npmRequire('bitcore');
 var Buffer = bitcore.deps.Buffer;
 var sha256 = bitcore.crypto.Hash.sha256;
 

@@ -14,9 +14,10 @@ audit-argument-checks
 edgee:slingshot
 yogiben:user-helpers
 meteorhacks:npm
-
-
-npm-container
 maclane:bootstrap-material-design
 cwohlman:pickadate
 http
+email
+
+
+npm-container
