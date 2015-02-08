@@ -22,7 +22,9 @@ Template.cessionUpdate.events({
     var currentCessionId = this._id;
 
     var cessionProperties = {
+      cessionId: currentCessionId,
       cessionStatus: $(e.target).find('[name=cessionStatus]').val(),
+      inputFile: $(e.target).find('[name=inputFile]').val(),
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
@@ -31,13 +33,20 @@ Template.cessionUpdate.events({
       return Session.set('cessionUpdateErrors', errors);
     }
 
-    Cessions.update(currentCessionId, {$set: cessionProperties}, function(error) {
+    Meteor.call('cessionUpdate', cessionProperties, function(error, result) {
       if (error) {
-        throwError(error.reason);
-      } else {
-        Router.go('cessionPage', {_id: currentCessionId});
+        return throwError(error.reason);
       }
+      Router.go('cessionPage', {_id: result._id});
     });
+
+    // Cessions.update(currentCessionId, {$set: cessionProperties}, function(error) {
+    //   if (error) {
+    //     throwError(error.reason);
+    //   } else {
+    //     Router.go('cessionPage', {_id: currentCessionId});
+    //   }
+    // });
   }
 });
 

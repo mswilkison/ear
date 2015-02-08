@@ -10,6 +10,13 @@
       </select>
       <span class="help-block">{{errorMessage 'cessionStatus'}}</span>
     </div>
+    <div class="form-group {{errorClass 'inputFile'}}">
+      <label class="control-label" for="inputFile">Document Upload</label>
+      <div class="controls">
+        <input name="inputFile" id="inputFile" type="file" class="form-control" />
+        <span class="help-block">{{errorMessage 'inputFile'}}</span>
+      </div>
+    </div>
     <div class="form-group {{errorClass 'updateDescription'}}">
       <label class="control-label" for="updateDescription">Update Description</label>
       <div class="controls">
