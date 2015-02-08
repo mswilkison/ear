@@ -1,7 +1,7 @@
 <template name="cessionDetails">
   <div class="cession">
     <div class="cession-content">
-      <h3>{{_id}}<span>{{regNumber}}</span></h3>
+      <h3>{{title}}&nbsp;<span>{{_id}}</span></h3>
       <p>
         created by {{author}}
         {{#if ownCession}}<a href="{{pathFor 'cessionUpdate'}}">Update</a>{{/if}}

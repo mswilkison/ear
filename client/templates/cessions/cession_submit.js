@@ -9,7 +9,7 @@ Template.cessionSubmit.events({
     e.preventDefault();
 
     var cession = {
-      regNumber: $(e.target).find('[name=regNumber]').val(),
+      title: $(e.target).find('[name=title]').val(),
       assetClass: $(e.target).find('[name=assetClass]').val(),
       cessionType: $(e.target).find('[name=cessionType]').val(),
       cessionDate: $(e.target).find('[name=cessionDate]').val(),
@@ -20,7 +20,7 @@ Template.cessionSubmit.events({
     };
 
     var errors = validateCession(cession);
-    if (errors.regNumber || errors.assetClass || errors.cessionType ||
+    if (errors.title || errors.assetClass || errors.cessionType ||
         errors.cessionDate || errors.amountAgainst) {
       return Session.set('cessionSubmitErrors', errors);
     }

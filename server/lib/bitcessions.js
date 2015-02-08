@@ -45,11 +45,9 @@ BitCession = function BitCession(cession) {
 
 BitCession.prototype.encode = function() {
     var signature = new Buffer("xEAR");   // 4 bytes
-    var b_regNumber = new Buffer(4)
-    var regNumber = parseInt(this.cession.regNumber);
-    b_regNumber.writeUInt32LE(regNumber, 0); // 4 bytes
+    var b_id = new Buffer(this.cession._id);
     var hash = sha256(new Buffer(JSON.stringify(this.cession))); // hash 32 bytes
-    return Buffer.concat([signature, b_regNumber, hash]);
+    return Buffer.concat([signature, b_id, hash]);
 }
 
 BitCession.prototype.prepare_tx = function(raw_json) {
