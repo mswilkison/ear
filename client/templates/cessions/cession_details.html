@@ -26,7 +26,9 @@
     </p>
     <p>
       <strong>Supporting Documents</strong>
-      [<a target="_blank" href="{{inputFile}}">Open</a>]
+      {{#each inputFile}}
+        [<a target="_blank" href="{{this}}">Open</a>]
+      {{/each}}
     </p>
     <p>
       <strong>Asset Description</strong> {{assetDescription}}

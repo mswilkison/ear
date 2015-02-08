@@ -1,3 +1,5 @@
+var uploader = new Slingshot.Upload("cessionDocumentUploads");
+
 Template.cessionUpdate.created = function() {
   Session.set('cessionUpdateErrors', {});
 };
@@ -24,7 +26,7 @@ Template.cessionUpdate.events({
     var cessionProperties = {
       cessionId: currentCessionId,
       cessionStatus: $(e.target).find('[name=cessionStatus]').val(),
-      inputFile: $(e.target).find('[name=inputFile]').val(),
+      inputFile: $(e.target).find('[name=inputFile]')[0].files[0],
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
@@ -37,6 +39,13 @@ Template.cessionUpdate.events({
       if (error) {
         return throwError(error.reason);
       }
+      if (cessionProperties.inputFile) {
+        uploader.send(cessionProperties.inputFile, function(error, downloadUrl) {
+          console.log(error);
+          Cessions.update(result._id, {$push: {"inputFile": downloadUrl}});
+        });
+      }
+
       Router.go('cessionPage', {_id: result._id});
     });
 

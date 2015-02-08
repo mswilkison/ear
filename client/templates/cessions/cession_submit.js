@@ -34,7 +34,7 @@ Template.cessionSubmit.events({
       if (cession.inputFile) {
         uploader.send(cession.inputFile, function(error, downloadUrl) {
           console.log(error);
-          Cessions.update(result._id, {$set: {"inputFile": downloadUrl}});
+          Cessions.update(result._id, {$set: {"inputFile": [downloadUrl]}});
         });
       }
 
