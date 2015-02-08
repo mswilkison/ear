@@ -47,7 +47,14 @@ BitCession.prototype.encode = function() {
     var signature = new Buffer("xEAR");   // 4 bytes
     var b_id = new Buffer(this.cession._id);
     var hash = sha256(new Buffer(JSON.stringify(this.cession))); // hash 32 bytes
-    return Buffer.concat([signature, b_id, hash]);
+    this.pending_data = Buffer.concat([signature, b_id, hash]);
+}
+
+BitCession.prototype.encode_update = function() {
+    var signature = new Buffer("xEAR");   // 4 bytes
+    var b_id = new Buffer(this.cession.cessionId);
+    var hash = sha256(new Buffer(JSON.stringify(this.cession.updateDescription))); // hash 32 bytes
+    this.pending_data = Buffer.concat([signature, b_id, hash]);
 }
 
 BitCession.prototype.prepare_tx = function(raw_json) {
@@ -62,7 +69,7 @@ BitCession.prototype.prepare_tx = function(raw_json) {
     var tx = new bitcore.Transaction()
       .from(utxos, btc_config.addr)
       .to(btc_config.addr, total - this.fee*1e8)
-      .addData(this.encode())
+      .addData(this.pending_data)
       .sign(new Buffer(btc_config.private_key, "hex")).uncheckedSerialize();
     return tx;
 }
