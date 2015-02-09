@@ -10,10 +10,10 @@
     <div class="form-group {{errorClass 'assetClass'}}">
       <label class="control-label" for="assetClass">Asset Class</label>
       <select name="assetClass" id="assetClass" class="form-control">
-        <option>Debtors</option>
-        <option>Debtors</option>
-        <option>Debtors</option>
-        <option>Debtors</option>
+        <option>Fixed</option>
+        <option>Moveable</option>
+        <option>Financial</option>
+        <option>Commodity</option>
       </select>
       <span class="help-block">{{errorMessage 'assetClass'}}</span>
     </div>
@@ -21,9 +21,8 @@
       <label class="control-label" for="cessionType">Cession Type</label>
       <select name="cessionType" id="cessionType" class="form-control">
         <option>Pledge</option>
-        <option>Pledge</option>
-        <option>Pledge</option>
-        <option>Pledge</option>
+        <option>Sale</option>
+        <option>Transfer</option>
       </select>
       <span class="help-block">{{errorMessage 'cessionType'}}</span>
     </div>
