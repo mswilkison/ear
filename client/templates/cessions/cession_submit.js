@@ -53,5 +53,8 @@ Template.cessionSubmit.helpers({
   },
   errorClass: function(field) {
     return !!Session.get('cessionSubmitErrors')[field] ? 'has-error' : '';
+  },
+  assetClasses: function() {
+    return assetClasses;
   }
 });
