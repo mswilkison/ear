@@ -1,12 +1,12 @@
 <template name="cessionItem">
   <div class="cession">
     <div class="cession-content">
-      <h3 style="display:inline;">
+      <h3>
         <a href="{{pathFor 'cessionPage'}}">{{title}}</a><span>{{organization}}</span>
       </h3>
-      <p class="label {{cessionStatusColor}} label-as-badge">{{cessionStatus}}</p>
       <p>
-        created by {{author}}
+        <span class="label {{cessionStatusColor}} label-as-badge">{{cessionStatus}}</span>
+        Created by {{author}}
         {{#if ownCession}}<a href="{{pathFor 'cessionUpdate'}}">Update</a>{{/if}}
       </p>
     </div>

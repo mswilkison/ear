@@ -1,11 +1,11 @@
 Template.cessionDetails.helpers({
   ownCession: function() {
-    return this.userId === Meteor.userId();
+    return this.organization === Meteor.user().profile.organization;
   },
 
   cessionStatusColor: function() {
     if (this.cessionStatus === "Active") {
-      return "label-success";
+      return "label-primary";
     } else if (this.cessionStatus === "Cancelled") {
       return "label-danger";
     }
