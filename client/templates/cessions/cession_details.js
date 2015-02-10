@@ -6,12 +6,8 @@ Template.cessionDetails.helpers({
   cessionStatusColor: function() {
     if (this.cessionStatus === "Active") {
       return "label-success";
-    } else if (this.cessionStatus === "Late") {
-      return "label-warning";
-    } else if (this.cessionStatus === "Default") {
+    } else if (this.cessionStatus === "Cancelled") {
       return "label-danger";
-    } else {
-      return "label-default";
     }
   },
 

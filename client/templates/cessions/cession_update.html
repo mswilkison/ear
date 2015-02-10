@@ -4,9 +4,7 @@
       <label class="control-label" for="cessionStatus">Cession Status</label>
       <select name="cessionStatus" id="cessionStatus" class="form-control">
         <option {{isSelected "Active"}}>Active</option>
-        <option {{isSelected "Late"}}>Late</option>
-        <option {{isSelected "Default"}}>Default</option>
-        <option {{isSelected "Closed"}}>Closed</option>
+        <option {{isSelected "Cancelled"}}>Cancelled</option>
       </select>
       <span class="help-block">{{errorMessage 'cessionStatus'}}</span>
     </div>

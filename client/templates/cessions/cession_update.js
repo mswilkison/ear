@@ -26,7 +26,7 @@ Template.cessionUpdate.events({
     var cessionProperties = {
       cessionId: currentCessionId,
       cessionStatus: $(e.target).find('[name=cessionStatus]').val(),
-      inputFile: $(e.target).find('[name=inputFile]')[0].files[0],
+      inputFile: $(e.target).find('[name=inputFile]')[0].files[0] || null,
       updateDescription: $(e.target).find('[name=updateDescription]').val()
     };
 
