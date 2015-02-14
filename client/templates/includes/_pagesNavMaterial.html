@@ -1,0 +1,13 @@
+<template name="_pagesNavMaterial">
+  {{#if show}}
+  <div style="text-align:center" data-pages="{{name}}" class="pagination-cont">
+    <ul class="pager">
+      {{#each paginationNeighbors}}
+      <li class="{{active}} {{disabled}}">
+      <a href="{{link}}">{{p}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+</template>
