@@ -1,31 +1,28 @@
 if (Cessions.find().count() === 0) {
-  Cessions.insert({
-    regNumber: '1958099908',
-    assetClass: 'Debtors',
-    cessionType: 'Pledge',
-    cessionDate: '2015-02-13',
-    amountAgainst: '1000',
-    inputFile: undefined,
-    assetDescription: 'This here awesome asset'
+  var tempId = Meteor.users.insert({
+    profile: { fullName: 'MacLane Wilkison',
+               organization: 'Contractual'}
+
   });
 
-  Cessions.insert({
-    regNumber: '1958099908',
-    assetClass: 'Debtors',
-    cessionType: 'Pledge',
-    cessionDate: '2015-02-13',
-    amountAgainst: '1000',
-    inputFile: undefined,
-    assetDescription: 'This here awesome asset'
-  });
+  var tempUser = Meteor.users.findOne(tempId);
 
-  Cessions.insert({
-    regNumber: '1958099908',
-    assetClass: 'Debtors',
-    cessionType: 'Pledge',
-    cessionDate: '2015-02-13',
-    amountAgainst: '1000',
-    inputFile: undefined,
-    assetDescription: 'This here awesome asset'
-  });
+  for (var i = 0; i < 30; i++) {
+    Cessions.insert({
+      title: 'Cession #' + i,
+      assetClass: 'Inventory',
+      cessionType: 'Pledge',
+      cessionDate: '02/12/2015',
+      amountAgainst: '100',
+      inputFile: null,
+      assetDescription: 'Lorem ipsum...',
+      cessionStatus: 'Active',
+      userId: tempUser._id,
+      author: tempUser.profile.fullName,
+      organization: tempUser.profile.organization,
+      submitted: new Date()
+    });
+  }
+
+    
 }
