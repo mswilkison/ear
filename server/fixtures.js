@@ -1,11 +1,4 @@
 if (Cessions.find().count() === 0) {
-  var tempId = Meteor.users.insert({
-    profile: { fullName: 'MacLane Wilkison',
-               organization: 'Contractual'}
-
-  });
-
-  var tempUser = Meteor.users.findOne(tempId);
 
   for (var i = 0; i < 30; i++) {
     Cessions.insert({
@@ -17,9 +10,9 @@ if (Cessions.find().count() === 0) {
       inputFile: null,
       assetDescription: 'Lorem ipsum...',
       cessionStatus: 'Active',
-      userId: tempUser._id,
-      author: tempUser.profile.fullName,
-      organization: tempUser.profile.organization,
+      userId: '1',
+      author: 'MacLane Wilkison', 
+      organization: 'Contractual',
       submitted: new Date()
     });
   }
