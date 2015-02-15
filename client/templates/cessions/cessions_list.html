@@ -1,11 +1,12 @@
-<template name="cessions">
+<template name="cessionsList">
   <div style="margin-bottom: 10px">
     {{> esInput index="cessions" class="form-control" placeholder="Search..."}}
   </div>
 
   {{#ifEsInputIsEmpty index="cessions"}}
-    {{> pages}}
-    {{> pagesNav}}  <!--Bottom navigation-->
+    {{#each cessions}}
+      {{> cessionItem}}
+    {{/each}}
   {{/ifEsInputIsEmpty}}
 
   {{#ifEsIsSearching index="cessions"}}
